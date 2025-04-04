@@ -18,17 +18,22 @@ Prerequisites
 Step 1: Clone the repository
   git clone https://github.com/Rhimanth/Django-rest_framework.git
   cd Django-rest_framework
+
 Step 2: Set up the virtual environment
   python3 -m venv venv
   source venv/bin/activate  # On Windows use 'venv\Scripts\activate'
+
 Step 3: Install dependencies
   pip install -r requirements.txt
+
 Step 4: Configure the database
   Make sure you have a PostgreSQL database set up (or modify the settings.py file for another database). Then, run the following commands to set up the database:
   python manage.py migrate
+
 Step 5: Create a superuser (for Admin access)
   python manage.py createsuperuser
   Follow the prompts to create an admin user.
+
 Step 6: Start the development server
   python manage.py runserver
   You can now access the API at http://127.0.0.1:8000/.
