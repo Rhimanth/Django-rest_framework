@@ -15,6 +15,7 @@ Prerequisites
   - Django
   - Django REST Framework
   - PostgreSQL (or any database of your choice)
+
 Step 1: Clone the repository
   git clone https://github.com/Rhimanth/Django-rest_framework.git
   cd Django-rest_framework
@@ -35,23 +36,35 @@ Step 5: Create a superuser (for Admin access)
   Follow the prompts to create an admin user.
 
 Step 6: Start the development server
+  
   python manage.py runserver
+  
   You can now access the API at http://127.0.0.1:8000/.
+
 API Endpoints
-    1. Token Generation
+    
+  1. Token Generation
+     
        	URL: /token/
+
           Method: POST
           Body: { "email": "user@example.com", "password": "password" }
           Description: Generates a JWT token for authenticated access.
-    2. Search Shipments by Category
+    
+  3. Search Shipments by Category
+     
       URL: /search?category={category}
         Method: GET
         Description: Search for shipments by category (e.g., category=Electronics).
-    3. View a Shipment
+  
+  4. View a Shipment
+     
       URL: /view1/{shipmentId}/
         Method: GET
         Description: View details of a specific shipment by shipmentId. Requires authentication.
-    4. Create a Shipment
+  
+  5. Create a Shipment
+     
       URL: /api2/
         Method: POST
         Body:
@@ -63,7 +76,9 @@ API Endpoints
           "shipmentPrice": 1000
         }
         Description: Create a new shipment record. Requires authentication.
-    5. Update a Shipment
+  
+  6. Update a Shipment
+     
       URL: /view1/{shipmentId}/
         Method: PUT
         Body:
@@ -73,7 +88,9 @@ API Endpoints
           "shipmentPrice": 800
         }
         Description: Update details of a shipment. Requires authentication.
-    6. Delete a Shipment
+  
+  7. Delete a Shipment
+     
       URL: /view1/{shipmentId}/
         Method: DELETE
         Description: Delete a shipment. Requires authentication.
